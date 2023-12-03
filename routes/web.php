@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ExampleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -114,5 +115,17 @@ Route::prefix('blog')->group(function () {
     });
     
 });
+
+Route::get('/login',function () {
+    return view('login');
+    
+});
+
+Route::post('/logged', function () {
+     return 'You are logged in';
+    
+})->name('logged');
+
+Route::get('controller',[ExampleController::class,'show']);
 
 
