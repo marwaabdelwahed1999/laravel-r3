@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ExampleController;
+use App\Http\Controllers\InformationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -121,11 +122,17 @@ Route::get('/login',function () {
     
 });
 
-Route::post('/logged', function () {
-     return 'You are logged in';
+// Route::post('/logged', function () {
+//      return 'You are logged in';
     
-})->name('logged');
+// })->name('logged');
 
-Route::get('controller',[ExampleController::class,'show']);
+// Route::get('controller',[ExampleController::class,'show']);
+
+// ------------------------------------------------------------------
+
+// Task_3
+Route::post('/submit', [InformationController::class, 'form_submision'])->name('submit');
+
 
 
