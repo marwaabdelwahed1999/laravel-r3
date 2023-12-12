@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ExampleController;
 use App\Http\Controllers\InformationController;
+use App\Http\Controllers\CarController;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -129,10 +131,25 @@ Route::get('/login',function () {
 
 // Route::get('controller',[ExampleController::class,'show']);
 
+
+
 // ------------------------------------------------------------------
 
 // Task_3
 Route::post('/submit', [InformationController::class, 'form_submision'])->name('submit');
+
+// Routs for cars tables
+// Route::get('storeCar',[CarController::class,'store']);
+Route::get('createCar',[CarController::class,'create'])->name('createCar');
+// Route::put('storeCar',[CarController::class,'store'])->name('storeCar');
+Route::get('cars',[CarController::class,'index']);
+Route::post('storeCar',[CarController::class,'store'])->name('storeCar');
+
+// Routes for Posts table
+Route::get('createPost',[PostController::class,'create'])->name('createPost');
+Route::get('posts',[PostController::class,'index']);
+Route::post('storePost',[PostController::class,'store'])->name('storePost');
+
 
 
 
