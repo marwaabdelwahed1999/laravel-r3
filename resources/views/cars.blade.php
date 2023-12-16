@@ -39,7 +39,7 @@
             
           @endif
         </td>
-        <td><a href="updateCar/{{$car->id}}">Edit</a></td>
+        <td><a href="editCar/{{$car->id}}">Edit</a></td>
         <td><a href="showCar/{{$car->id}}">Show</a></td>
 
       </tr>

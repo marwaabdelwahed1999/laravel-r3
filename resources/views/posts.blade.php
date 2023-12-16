@@ -20,6 +20,9 @@
         <th>Description</th>
         <th>Author</th>
         <th>Published</th>
+        {{-- <th>Created At</th> --}}
+        <th>Edit</th>
+        <th>Show</th>
       </tr>
     </thead>
     <tbody>
@@ -28,6 +31,7 @@
         <td>{{$post->title}}</td>
         <td>{{$post->description}}</td>
         <td>{{$post->author}}</td>
+        
 
         {{-- <td>{{$car->published ? 'Yes' : 'No'}}</td> --}}
         <td>
@@ -40,6 +44,9 @@
             
           @endif
         </td>
+        {{-- <td>{{$post-created_at}}</td> --}}
+        <td><a href="editPost/{{$post->id}}">Edit</a></td>
+        <td><a href="showPost/{{$post->id}}">Show</a></td>
       </tr>
        @endforeach
     </tbody>

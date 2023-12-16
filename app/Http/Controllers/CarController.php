@@ -49,7 +49,7 @@ class CarController extends Controller
         // $cars->save();
 
         $data = $request->only($this->columns);
-        $data['published'] = isset($request->publised);
+        $data['published'] = isset($request->published);
         // return "data  added successfully";
         Car::Create($data);
         return redirect('cars');
@@ -81,7 +81,7 @@ class CarController extends Controller
     public function update(Request $request, string $id)
     {
         $data = $request->only($this->columns);
-        $data['published'] = isset($request->publised);
+        $data['published'] = isset($request->published);
         Car::where('id',$id)->update($data);
         return redirect('cars');
     }
