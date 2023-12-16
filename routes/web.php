@@ -142,7 +142,10 @@ Route::post('/submit', [InformationController::class, 'form_submision'])->name('
 // Route::get('storeCar',[CarController::class,'store']);
 Route::get('createCar',[CarController::class,'create'])->name('createCar');
 // Route::put('storeCar',[CarController::class,'store'])->name('storeCar');
-Route::get('cars',[CarController::class,'index']);
+Route::get('cars',[CarController::class,'index'])->name('cars');
+Route::get('updateCar/{id}',[CarController::class,'edit']);
+Route::get('showCar/{id}',[CarController::class,'show']);
+Route::put('update/{id}',[CarController::class,'update'])->name('update');
 Route::post('storeCar',[CarController::class,'store'])->name('storeCar');
 
 // Routes for Posts table
