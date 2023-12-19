@@ -18,6 +18,7 @@
     <ul class="nav navbar-nav">
       <li class="active"><a href="{{route('cars')}}">Home</a></li>
       <li><a href="{{route('createCar')}}">Insert Car</a></li>
+      <li><a href="{{route('trashed')}}">Trashed Cars</a></li>
       <li><a href="/posts">Posts</a></li>
       <li><a href="{{route('createPost')}}">Insert Post</a></li>
     </ul>

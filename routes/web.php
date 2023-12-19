@@ -147,6 +147,13 @@ Route::get('editCar/{id}',[CarController::class,'edit']);
 Route::get('showCar/{id}',[CarController::class,'show']);
 Route::put('updateCar/{id}',[CarController::class,'update'])->name('updateCar');
 Route::post('storeCar',[CarController::class,'store'])->name('storeCar');
+Route::get('deleteCar/{id}',[CarController::class,'destroy']);
+Route::get('trashed',[CarController::class,'trashed'])->name('trashed');
+Route::get('forceDelete/{id}',[CarController::class,'forceDelete'])->name('forceDelete');
+Route::get('restoreCar/{id}',[CarController::class,'restore'])->name('restoreCar');
+
+
+
 
 // Routes for Posts table
 Route::get('createPost',[PostController::class,'create'])->name('createPost');
