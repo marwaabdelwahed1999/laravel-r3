@@ -162,6 +162,12 @@ Route::get('editPost/{id}',[PostController::class,'edit'])->name('edit');
 Route::put('update/{id}',[PostController::class,'update'])->name('update_post');
 Route::get('showPost/{id}',[PostController::class,'show']);
 Route::post('storePost',[PostController::class,'store'])->name('storePost');
+Route::get('deletePost/{id}',[PostController::class,'destroy']);
+Route::get('trashed_post',[PostController::class,'trashed'])->name('trashed_post');
+Route::get('forceDeletePost/{id}',[PostController::class,'forceDelete'])->name('forceDeletePost');
+Route::get('restorePost/{id}',[PostController::class,'restore'])->name('restorePost');
+
+
 
 
 

@@ -21,6 +21,8 @@
       <li><a href="{{route('trashed')}}">Trashed Cars</a></li>
       <li><a href="/posts">Posts</a></li>
       <li><a href="{{route('createPost')}}">Insert Post</a></li>
+      <li><a href="{{route('trashed_post')}}">Trashed Posts</a></li>
+
     </ul>
   </div>
 </nav>

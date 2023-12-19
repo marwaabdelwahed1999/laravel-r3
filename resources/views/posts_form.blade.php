@@ -17,16 +17,25 @@
     {{-- @method('put') --}}
     <div class="form-group">
       <label for="title">Post Title:</label>
-      <input type="text" class="form-control" id="title" placeholder="Enter title" name="title">
+      <input type="text" class="form-control" id="title" placeholder="Enter title" name="title" value="{{old('title')}}">
+      @error('title')
+      {{$message}}
+    @enderror
     </div>
     <div class="form-group">
       <label for="description">description:</label>
-      <textarea class="form-control" name="description" id="" cols="60" rows="3"></textarea>
+      <textarea class="form-control" name="description" id="" cols="60" rows="3">{{old('title')}}</textarea>
+      @error('description')
+      {{$message}}
+      @enderror
     </div>
 
     <div class="form-group">
         <label for="author">Author</label>
-        <textarea class="form-control" name="author" id="" cols="60" rows="3"></textarea>
+        <input type="text" class="form-control" id="author" placeholder="Enter title" name="author" value="{{old('author')}}">
+        @error('author')
+        {{$message}}
+        @enderror
       </div>
 
     <div class="checkbox">
