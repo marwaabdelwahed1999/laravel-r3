@@ -168,7 +168,20 @@ Route::get('forceDeletePost/{id}',[PostController::class,'forceDelete'])->name('
 Route::get('restorePost/{id}',[PostController::class,'restore'])->name('restorePost');
 
 
+// display image
 
+Route::get('test',function () {
+    return view('test');
+    
+});
 
+// upload image
+
+Route::get('image',function () {
+    return view('image');
+    
+});
+
+Route::post('imageUpload',[ExampleController::class,'upload'])->name('imageUpload');
 
 

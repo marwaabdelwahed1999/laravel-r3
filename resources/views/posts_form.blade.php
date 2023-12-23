@@ -39,7 +39,7 @@
       </div>
 
     <div class="checkbox">
-      <label><input type="checkbox" name="published"> published</label>
+      <label><input type="checkbox" name="published" @checked(old('published'))> published</label>
     </div>
     <button type="submit" class="btn btn-default">Insert Post</button>
   </form>

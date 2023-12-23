@@ -12,7 +12,7 @@
   @include('includes.nav');
 <div class="container">
   <h2>Vertical (basic) form</h2>
-  <form action="{{route('storeCar')}}" method="post">
+  <form action="{{route('storeCar')}}" method="post" enctype="multipart/form-data">
     @csrf
     {{-- @method('put') --}}
     <div class="form-group">
@@ -29,8 +29,19 @@
       {{$message}}
       @enderror
     </div>
+    {{-- image --}}
+
+    <div class="form-group">
+      <label for="image">image:</label>
+      <input type="file" class="form-control" id="image" placeholder="Enter image" name="image">
+      @error('image')
+        {{$message}}
+      @enderror
+    </div>
+
+
     <div class="checkbox">
-      <label><input type="checkbox" name="published"> published</label>
+      <label><input type="checkbox" name="published" @checked(old('published'))> published</label>
     </div>
     <button type="submit" class="btn btn-default">Insert Car</button>
   </form>
